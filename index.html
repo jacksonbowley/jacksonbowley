@@ -35,22 +35,15 @@
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
     document.getElementById("sitetitle").style.display="none"; 
+    document.getElementById("info").style.display="none"; 
 }
 
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
-    document.getElementById("sitetitle").style.display="block"; 
+    document.getElementById("sitetitle").style.display="block";
+    document.getElementById("info").style.display="block"; 
 }
-
-
-var box = document.getElementById('box');
-document.addEventListener('mousemove', fn, false);
-
-function fn(e) {
-  box.style.left = e.pageX + 'px';
-  box.style.top = e.pageY + 'px';
-}
-    
+ 
     
     
     
@@ -63,12 +56,12 @@ function fn(e) {
   <div class="overlay2-content">
        <div class="overlay2-text">
       
-    <h1>Jackson Bowley is a London Based “Beauty” Photographer.</h1><br>    
+    <h1>Jackson Bowley is a London based 'Beauty' Photographer.</h1><br>    
 
-           <h3>Selected Clients:</h3>
+           <h3>Clients:</h3>
 <h1>3ina, ASOS, Dazed Beauty, i-D Magazine, It’s Nice That, Nike, Office Magazine, Refinery 29.</h1><br>
        
-           <h3>Selected Press:</h3>
+           <h3>Press:</h3>
    <h1> <i>The Masks We Wear</i>: <a href="https://www.dazeddigital.com/beauty/head/article/44844/1/shalva-nikvashvili-jackson-bowley-masks" target="_blank">Dazed Beauty</a></h1>
   <h1>  <i>Xerox</i>: <a href="https://www.itsnicethat.com/articles/jackson-bowley-xerox-photography-250718" target="_blank">It’s Nice That</a>, <a href="http://officemagazine.net/xerox" target="_blank">Office Beauty</a>. </h1>
    <h1> <i>Colour Me Bad</i>: <a href="https://www.itsnicethat.com/articles/jackson-bowley-athena-paginton-colour-me-bad-photography-280319" target="_blank">It’s Nice That</a>, <a href="http://officemagazine.net/color-me-bad" target="_blank">Office Beauty</a>. </h1>
@@ -115,8 +108,8 @@ function fn(e) {
     <h1 class="title2"><span style="cursor:pointer" onclick="openNav()">Jackson Bowley...</span></h1>
     </div>
     
-    <div class="overlay2-button">
-            <h3><span style="cursor:pointer" onclick="openNav()">Close</span></h3>  
+    <div id="info" class="header2">
+          <h3><span style="cursor:pointer" onclick="openNav()"><a>Info</a></span></h3>  
   </div>
 </div>
     
