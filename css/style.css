@@ -95,7 +95,7 @@ a:hover{
     background-color: transparent;
     text-align: left;
     z-index: 999;
-    mix-blend-mode: overlay;
+    mix-blend-mode: none;
 }
 
 
@@ -442,7 +442,7 @@ label.next {
     left: 0;
     background-color: transparent;
     overflow-x: hidden;
-    mix-blend-mode: overlay;
+    mix-blend-mode: none;
 }
 
 .overlay2-content {
