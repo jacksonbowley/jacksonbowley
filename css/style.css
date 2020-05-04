@@ -90,12 +90,13 @@ a:hover{
     position: fixed;
     width: 100%;
     height: auto;
+    padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: transparent;
     text-align: left;
     z-index: 999;
-    mix-blend-mode: none;
+    mix-blend-mode: overlay;
 }
 
 
@@ -115,10 +116,6 @@ a:hover{
     margin-right: 10px;
 }
 
-.title1,
-.title2 {
-
-}
 
 .title2 {
   position: fixed;
@@ -131,8 +128,6 @@ a:hover{
 .header-wrap:hover .title2 {
   opacity: 1;
 }
-
-
 
 .content {
     border: 0px solid green;
@@ -431,84 +426,86 @@ label.next {
 
 
 
+/* safari blend mode fix */
 
+#overlay-test {
+  isolation: isolate;
+}
 
 .overlay2 {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    overflow-x: hidden;
-    mix-blend-mode: none;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  overflow-x: hidden;
+  mix-blend-mode: overlay;
 }
 
 .overlay2-content {
-    position: relative;
-    top: 0;
-    width: 100%;
-    
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  
 }
 
 .overlay2-text {
-    position: relative;
-    top: 0;
-    width: 90%;
-    height: 93vh;
-    left: 0;
-    text-align: left;
-    margin-left: 10px;
-    margin-right: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+ justify-content: space-between;
+  width: 90%;
+  max-height: 800px;
+  left: 0;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
+
 .overlay2-bottomtext {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 6vh;
-    left: 0;
-    text-align: left;
-    margin-left: 10px;
-    margin-right: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  height: auto;
+  left: 0;
+  margin: 10px 10px;
+}
+@media screen and (max-width: 1000px) {
+
+.overlay2-bottomtext {
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.overlay2-text {
+  max-height: 35%;
+}
 }
 
 .overlay2-button {
+
     position: absolute;
     top: 0;
-    height: 96vh;
     width: 10%;
     right: 0;
     text-align: right;
-    border: solid 0px purple;
     margin-right: 10px;
 }
 
 
-.overlay-column-1 {
-position: absolute;
-    width: 33.33%;
-    bottom: 0;
-
+.overlay-column-1, .overlay-column-2, .overlay-column-3 {
+position: relative;
+height: auto;
 }
-
-.overlay-column-2 {
-        position: absolute;
-      display: inline-block;
-    width: 33.33%;
-    left:33%;
-  right:33%;
-    bottom: 0;
-}
-
-.overlay-column-3 {
-        position: absolute;
-    width: 33.33%;
-    bottom: 0;
-    right: 0;
-}
-
 
 .overlay2 a {
     text-decoration: none;
@@ -522,12 +519,11 @@ position: absolute;
 
 
 .closebtn {
-    position: relative;
+  position: relative;
    border: solid 0px purple;
    top: 0;
     z-index: 9999;
 }
-
 
 
 .star {
